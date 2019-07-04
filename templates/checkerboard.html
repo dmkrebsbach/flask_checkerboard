@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    	<title></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='checkerboard_style.css')  }}">
+        <!-- <script type="text/javascript" src="{{ url_for('static', filename='checkerboard_script.js') }}"></script> -->
+	</head>
+    <body>
+
+        <h1>Here is Your Checkerboard!</h1>
+        <div class="bullshit">
+            <div class="checkermat">
+                <div class="checkerboard">
+                        <!-- {% for i in range(y//2) %}
+                        <div>
+                            {% for j in range(x//2) %}
+                                <div style="background-color: {{color1}}"></div>
+                                <div style="background-color: {{color2}};"></div>
+                            {% endfor %}
+                            {% if x % 2 == 1: %}
+                                <div style="background-color: {{color1}}"></div>
+                            {% endif %}
+                        </div>
+                        <div>
+                            {% for j in range(x//2) %}
+                                <div style="background-color: {{color2}}"></div>
+                                <div style="background-color: {{color1}};"></div>
+                            {% endfor %}
+                            {% if x % 2 == 1: %}
+                                <div style="background-color: {{color2}}"></div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                        {% if x % 2 == 1: %}
+                        <div>
+                            {% for j in range(x//2) %}
+                                <div style="background-color: {{color1}}"></div>
+                                <div style="background-color: {{color2}};"></div>
+                            {% endfor %}
+                            {% if x % 2 == 1: %}
+                                <div style="background-color: {{color1}};"></div>
+                            {% endif %}
+                        </div>
+                        {% endif %} -->
+
+
+                    <table>
+                        {% for i in range(x): %}
+                        <tr>
+                            {% for j in range(y): %}
+                            <td style="background-color: {{color1}}" class='color{{ (i+j)%2+1 }}'></td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}        
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
