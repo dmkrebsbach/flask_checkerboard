@@ -15,43 +15,18 @@
         <div class="bullshit">
             <div class="checkermat">
                 <div class="checkerboard">
-                        <!-- {% for i in range(y//2) %}
-                        <div>
-                            {% for j in range(x//2) %}
-                                <div style="background-color: {{color1}}"></div>
-                                <div style="background-color: {{color2}};"></div>
-                            {% endfor %}
-                            {% if x % 2 == 1: %}
-                                <div style="background-color: {{color1}}"></div>
-                            {% endif %}
-                        </div>
-                        <div>
-                            {% for j in range(x//2) %}
-                                <div style="background-color: {{color2}}"></div>
-                                <div style="background-color: {{color1}};"></div>
-                            {% endfor %}
-                            {% if x % 2 == 1: %}
-                                <div style="background-color: {{color2}}"></div>
-                            {% endif %}
-                        </div>
-                        {% endfor %}
-                        {% if x % 2 == 1: %}
-                        <div>
-                            {% for j in range(x//2) %}
-                                <div style="background-color: {{color1}}"></div>
-                                <div style="background-color: {{color2}};"></div>
-                            {% endfor %}
-                            {% if x % 2 == 1: %}
-                                <div style="background-color: {{color1}};"></div>
-                            {% endif %}
-                        </div>
-                        {% endif %} -->
-
-
+                        
                     <table>
                         {% for i in range(x): %}
                         <tr>
                             {% for j in range(y): %}
+                            <td style="background-color: {{color1}}" class='color{{ (i+j)%2+1 }}'></td>
+                            <td style="background-color: {{color2}}" class='color{{ (i+j)%2+1 }}'></td>
+                            {% endfor %}
+                        </tr>
+                        <tr>
+                            {% for j in range(y): %}
+                            <td style="background-color: {{color2}}" class='color{{ (i+j)%2+1 }}'></td>
                             <td style="background-color: {{color1}}" class='color{{ (i+j)%2+1 }}'></td>
                             {% endfor %}
                         </tr>

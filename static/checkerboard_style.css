@@ -26,23 +26,26 @@ div.checkermat div.checkerboard table {
     margin: 50px 50px;
     display: flex;
     
+    
 }
 
 div.checkermat div.checkerboard table tr td{
-    width: 100px;
-    height: 100px;
-    margin: auto;
+    width: 50px;
+    height: 50px;
+    
 }
 
 .color1 {
     background-color: red;
+    outline: 1px solid red;
 }
 
 .color2 {
     background-color: black;
+    outline: 1px solid black;
 }
 
-.container {
+/* .container {
     padding: 50px 50px;
 }
 
@@ -68,4 +71,4 @@ div.checkermat div.checkerboard table tr td{
     border: 1px solid black;
     background: black;
     display: flex;
-}
+} */
